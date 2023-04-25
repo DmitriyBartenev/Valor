@@ -10,6 +10,7 @@ export const colors = {
 	light: '#8888A6',
 	yellow: '#FCB223',
 	plateDark: 'rgba(3, 3, 31, 0.6)',
+	plateLight: 'rgba(33, 33, 66, 0.6)',
 	strokeObject: 'rgba(184, 184, 227, 0.08)',
 };
 
