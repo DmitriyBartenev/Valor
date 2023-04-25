@@ -13,6 +13,8 @@ export const colors = {
 const GlobalStyle = createGlobalStyle`
 	*{
 		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
 	}
 	html,body{
 		width: 100%;
@@ -22,8 +24,6 @@ const GlobalStyle = createGlobalStyle`
 		font-family: 'Mulish', sans-serif;
 		background-color: ${colors.back};
 		color: ${colors.white};
-		margin: 0;
-		padding: 0;
 	}
 	h1, h2, h3, h4, h5, h6{
 		margin: 0;
