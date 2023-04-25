@@ -4,10 +4,13 @@ const breakpoints = [430, 1200, 1440, 1680];
 export const mq = breakpoints.map((bp) => `@media (max-width: ${bp}px)`);
 
 export const colors = {
-	back: '#10102F',
+	black: '#000000',
 	white: '#FFFFFF',
+	back: '#10102F',
 	light: '#8888A6',
 	yellow: '#FCB223',
+	plateDark: 'rgba(3, 3, 31, 0.6)',
+	strokeObject: 'rgba(184, 184, 227, 0.08)',
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -15,13 +18,13 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
+		font-family: 'Mulish', sans-serif;
 	}
 	html,body{
 		width: 100%;
 		height: 100%;
 	}
 	body{
-		font-family: 'Mulish', sans-serif;
 		background-color: ${colors.back};
 		color: ${colors.white};
 	}
@@ -31,12 +34,16 @@ const GlobalStyle = createGlobalStyle`
 	h1{
 		font-weight: 800;
 		font-size: 96px;
-		line-height: 96;
+		line-height: 96px;
 	}
 	h3{
 		font-weight: 800;
 		font-size: 46px;
-		line-height: 48;
+		line-height: 48px;
+	}
+	a{
+		text-decoration: none;
+		color: inherit;
 	}
 `;
 
