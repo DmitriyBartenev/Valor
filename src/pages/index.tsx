@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Main from '@/components/Main';
 import Partnership from '@/components/Partnership';
 import Meeting from '@/components/Meeting';
+import Footer from '@/components/Footer';
 
 export default function Home() {
 	return (
@@ -18,6 +19,7 @@ export default function Home() {
 			<Main />
 			<Partnership />
 			<Meeting />
+			<Footer />
 		</>
 	);
 }
