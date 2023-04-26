@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { mq } from '@/styles';
 
 const Caption: React.FC = () => {
 	return (
@@ -11,8 +12,18 @@ const Caption: React.FC = () => {
 };
 
 const StyledCaption = styled.div`
-	padding: 80px 0;
+	padding: 80px 0px;
 	display: flex;
+	${mq[1]} {
+		padding: 32px 0;
+		margin-left: 16px;
+	}
+	${mq[0]} {
+		h1 {
+			font-size: 40px;
+			line-height: 40px;
+		}
+	}
 	h1 {
 		text-shadow: 0 15px 15px rgba(6, 6, 40, 0.5);
 		max-width: 410px;
@@ -27,6 +38,9 @@ const StyledCaption = styled.div`
 		font-weight: 800;
 		width: 200px;
 		text-shadow: 0 15px 15px rgba(6, 6, 40, 0.5);
+		${mq[1]} {
+			display: none;
+		}
 	}
 `;
 

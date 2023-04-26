@@ -37,6 +37,8 @@ const StyledAuthButton = styled.button`
 	background-repeat: no-repeat;
 	background-position: left;
 	gap: 8px;
+	max-height: 40px;
+	min-width: 130px;
 	padding: 9px 16px;
 	font-size: 16px;
 	line-height: 22px;

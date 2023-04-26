@@ -14,6 +14,7 @@ import { PartnershipTextarea } from '../ui/textareas/PartnershipTextarea';
 import { CustomPasswordInput } from '../ui/inputs/CustomPasswordInput';
 
 import { colors } from '@/styles';
+import { mq } from '@/styles';
 import SuccessfulMessage from './SuccessfulMessage';
 
 const SignUpForPartnership: React.FC = () => {
@@ -91,11 +92,11 @@ const SignUpForPartnership: React.FC = () => {
 
 const StyledSignUpForPartnership = styled.form`
 	width: 100%;
-	height: 380px;
+	height: 100%;
 	background-image: url('./images/PartnershipFormBg.png');
 	background-repeat: no-repeat;
 	background-position: left;
-	background-size: contain;
+	background-size: cover;
 	background-color: ${colors.plateLight};
 	box-shadow: 0 -8px 0 0 rgba(5, 5, 27, 0.4) inset,
 		0 1px 0 0 rgba(189, 189, 238, 0.15) inset,
@@ -115,6 +116,10 @@ const StyledConfirm = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin-top: 24px;
+	${mq[1]} {
+		flex-direction: column;
+		gap: 12px;
+	}
 `;
 
 const StyledInputContainer = styled.div`
@@ -122,6 +127,9 @@ const StyledInputContainer = styled.div`
 	justify-content: space-between;
 	margin-bottom: 16px;
 	gap: 16px;
+	${mq[1]} {
+		flex-direction: column;
+	}
 `;
 
 export default SignUpForPartnership;

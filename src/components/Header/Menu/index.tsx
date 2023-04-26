@@ -38,14 +38,17 @@ const Menu: React.FC = () => {
 const StyledMenu = styled.div`
 	width: 100%;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
 `;
 
 const StyledNavMenu = styled.div`
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	gap: 64px;
+	@media screen and (max-width: 840px) {
+		display: none;
+	}
 `;
 
 export default Menu;

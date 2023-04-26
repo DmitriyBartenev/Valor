@@ -8,6 +8,7 @@ export const StyledCustomInput = styled.div<{ error: string | undefined }>`
 	gap: 4px;
 	position: relative;
 	input {
+		width: 100%;
 		padding: 9px 16px;
 		background-color: ${colors.plateDark};
 		font-size: 16px;

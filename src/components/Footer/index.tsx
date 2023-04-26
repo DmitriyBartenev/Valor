@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
+import { mq } from '@/styles';
 
 import { images } from 'public/index';
 import { icons } from '../ui/icons/_index';
@@ -38,11 +39,23 @@ const StyledFooter = styled.footer`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: 15px;
+	flex-wrap: wrap;
 	padding: 48px 200px;
 	svg {
 		path {
 			fill: white;
 		}
+	}
+	${mq[3]} {
+		padding: 40px 120px;
+	}
+	${mq[2]} {
+		padding: 40px 96px;
+	}
+	${mq[0]} {
+		padding: 32px 32px;
+		flex-direction: column;
 	}
 `;
 
@@ -50,6 +63,7 @@ const StyledFooterContacts = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: 32px;
 	p {
 		display: flex;
@@ -59,6 +73,11 @@ const StyledFooterContacts = styled.div`
 	}
 	span {
 		color: ${colors.light};
+	}
+	${mq[0]} {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 `;
 

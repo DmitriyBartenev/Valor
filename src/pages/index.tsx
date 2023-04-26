@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
+import { mq } from '@/styles';
 
 import Header from '@/components/Header';
 import Main from '@/components/Main';
@@ -32,11 +33,13 @@ export default function Home() {
 const StyledTopBg = styled.div`
 	background-image: url('./images/TopBg.png');
 	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 `;
 
 const StyledBottomBg = styled.div`
 	background-image: url('./images/BottomBg.png');
 	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 `;

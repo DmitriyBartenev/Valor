@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { mq } from '@/styles';
 
 import {
 	SignUpButton,
@@ -20,6 +21,13 @@ const StyledAuthentication = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	gap: 16px;
+	@media screen and (max-width: 840px) {
+		justify-content: center;
+		width: 100%;
+	}
+	${mq[0]} {
+		flex-wrap: wrap;
+	}
 `;
 
 export default Authentication;

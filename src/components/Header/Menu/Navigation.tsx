@@ -26,6 +26,7 @@ const StyledNavigation = styled.nav`
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+	flex-wrap: wrap;
 	gap: 16px;
 `;
 

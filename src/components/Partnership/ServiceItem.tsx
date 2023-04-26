@@ -22,9 +22,9 @@ const StyledServiceItem = styled.div<{ src: string }>`
 	background-image: ${({ src }) => `url(${src})`};
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
+	background-size: 100% 100%;
 	padding: 32px;
-	min-width: 302px;
+	min-width: 300px;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;

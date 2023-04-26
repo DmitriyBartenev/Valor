@@ -72,6 +72,7 @@ const StyledBusinessDropdown = styled.div<{ visible: boolean }>`
 	ul {
 		list-style: none;
 		position: absolute;
+		z-index: 3;
 		width: 100%;
 		left: 0;
 		top: 100%;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { mq } from '@/styles';
 import { colors } from '@/styles';
 
 import MeetingItem from './MeetingItem';
@@ -22,6 +23,15 @@ const Meeting = () => {
 
 const StyledMeeting = styled.section`
 	padding: 120px 200px;
+	${mq[3]} {
+		padding: 96px 120px;
+	}
+	${mq[2]} {
+		padding: 96px 96px;
+	}
+	${mq[1]} {
+		padding: 32px 16px;
+	}
 	h3 {
 		max-width: 479px;
 	}
@@ -37,6 +47,7 @@ const StyledMeeting = styled.section`
 const StyledMeetingList = styled.div`
 	display: flex;
 	gap: 24px;
+	flex-wrap: wrap;
 `;
 
 export default Meeting;

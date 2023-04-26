@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import LanguageItem from './LanguageItem';
 
 import { langs } from '@/data/langItems';
+import { mq } from '@/styles';
 
 const Languages: React.FC = () => {
 	return (
@@ -20,6 +21,9 @@ const StyledLanguages = styled.div`
 	align-items: center;
 	justify-content: center;
 	gap: 8px;
+	${mq[3]} {
+		flex-direction: column;
+	}
 `;
 
 export default Languages;
