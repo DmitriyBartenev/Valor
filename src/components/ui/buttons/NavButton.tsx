@@ -18,7 +18,7 @@ const StyledNavButton = styled.button<NavButtonProps>`
 	align-items: center;
 	color: ${colors.white};
 	border: ${({ active }) =>
-		active ? `solid 1px ${colors.strokeObject}` : 'none'};
+		active ? `solid 1px ${colors.strokeObject}` : 'solid 1px transparent'};
 	background-color: ${({ active }) =>
 		active ? colors.plateDark : 'transparent'};
 	box-shadow: ${({ active }) =>
@@ -37,4 +37,7 @@ const StyledNavButton = styled.button<NavButtonProps>`
 	line-height: 22px;
 	letter-spacing: -3%;
 	cursor: pointer;
+	:hover {
+		border: solid 1px rgba(252, 178, 35, 0.2);
+	}
 `;

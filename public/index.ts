@@ -7,6 +7,8 @@ import SignIn from './icons/signIn.svg';
 import Plus from './icons/plus.svg';
 import Telegram from './icons/telegram.svg';
 import Email from './icons/email.svg';
+import Close from './icons/close.svg';
+import ListStyle from './icons/listStyle.svg';
 
 export const images = {
 	GroundBottom,
@@ -20,4 +22,6 @@ export const icons = {
 	Plus,
 	Email,
 	Telegram,
+	Close,
+	ListStyle,
 };

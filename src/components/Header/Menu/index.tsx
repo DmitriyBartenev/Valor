@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import FAQ from '@/components/FAQ';
 import Navigation from './Navigation';
 import Authentication from './Authentication';
 
@@ -10,13 +11,16 @@ import { images } from 'public/index.ts';
 const Menu: React.FC = () => {
 	const { Logo } = images;
 
+	const [visible, setVisible] = useState<boolean>(false);
+
 	return (
 		<StyledMenu>
 			<StyledNavMenu>
 				<Image src={Logo} width={172} height={40} alt="ValorLogo" />
-				<Navigation />
+				<Navigation setVisible={setVisible} />
 			</StyledNavMenu>
 			<Authentication />
+			{visible && <FAQ setVisible={setVisible} />}
 		</StyledMenu>
 	);
 };

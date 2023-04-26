@@ -14,6 +14,7 @@ export const colors = {
 	strokeObject: 'rgba(184, 184, 227, 0.08)',
 	strokeInput: 'rgba(184, 184, 227, 0.25)',
 	superDark: '#06061F',
+	faqSuperDark: 'rgba(6, 6, 31, 0.97)',
 };
 
 const GlobalStyle = createGlobalStyle`
