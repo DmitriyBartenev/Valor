@@ -37,4 +37,9 @@ const StyledLangButton = styled.button<LangButtonProps>`
 	line-height: 18px;
 	color: ${colors.white};
 	cursor: pointer;
+	svg {
+		path {
+			fill: white;
+		}
+	}
 `;

@@ -1,4 +1,7 @@
+import { icons } from '@/components/ui/icons/_index';
+const { EmailIcon, TelegramIcon } = icons;
+
 export const socialsItems = [
-	{ id: 1, src: './icons/telegram.svg', width: 16, height: 14, active: true },
-	{ id: 2, src: './icons/email.svg', width: 16, height: 12, active: true },
+	{ id: 1, Icon: TelegramIcon, active: true },
+	{ id: 2, Icon: EmailIcon, active: true },
 ];

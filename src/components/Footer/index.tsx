@@ -2,12 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { icons, images } from 'public/index';
+import { images } from 'public/index';
+import { icons } from '../ui/icons/_index';
 import { colors } from '@/styles';
 
 const Footer: React.FC = () => {
 	const { Logo } = images;
-	const { Telegram, Email } = icons;
+	const { EmailIcon, TelegramIcon } = icons;
 
 	return (
 		<StyledFooter>
@@ -17,11 +18,11 @@ const Footer: React.FC = () => {
 				<span>F.A.Q.</span>
 				<span>Terms</span>
 				<p>
-					<Image src={Telegram} alt="TelegramLogo" width={16} height={14} />
+					<TelegramIcon />
 					@ValorManager
 				</p>
 				<p>
-					<Image src={Email} alt="EmailLogo" width={16} height={12} />
+					<EmailIcon />
 					support@valor.casino
 				</p>
 			</StyledFooterContacts>
@@ -38,6 +39,11 @@ const StyledFooter = styled.footer`
 	justify-content: space-between;
 	align-items: center;
 	padding: 48px 200px;
+	svg {
+		path {
+			fill: white;
+		}
+	}
 `;
 
 const StyledFooterContacts = styled.div`

@@ -14,6 +14,7 @@ import { PartnershipTextarea } from '../ui/textareas/PartnershipTextarea';
 import { CustomPasswordInput } from '../ui/inputs/CustomPasswordInput';
 
 import { colors } from '@/styles';
+import SuccessfulMessage from './SuccessfulMessage';
 
 const SignUpForPartnership: React.FC = () => {
 	const [submitted, setSubmitted] = useState<boolean>(false);
@@ -35,56 +36,62 @@ const SignUpForPartnership: React.FC = () => {
 
 	return (
 		<StyledSignUpForPartnership onSubmit={handleSubmit(onSubmit)}>
-			<StyledInputContainer>
-				<PartnershipInput
-					label="Email"
-					placeholder="Enter your Email"
-					type="email"
-					id="email"
-					register={{ ...register('email') }}
-					error={errors.email?.message}
-				/>
-				<CustomPasswordInput
-					label="Password"
-					placeholder="Enter your Password"
-					id="password"
-					register={{ ...register('password') }}
-					error={errors.password?.message}
-				/>
-			</StyledInputContainer>
-			<StyledInputContainer>
-				<BusinessDropdown
-					label="Your Business"
-					placeholder="Select one or more"
-				/>
-				<PartnershipInput
-					label="Your Telegram Account"
-					placeholder="Enter your Telegram"
-					type="text"
-					id="telegram"
-					register={{ ...register('telegram') }}
-					error={errors.telegram?.message}
-				/>
-			</StyledInputContainer>
-			<PartnershipTextarea
-				placeholder=". . ."
-				label="Tell about Your results"
-				id="results"
-			/>
-			<StyledConfirm>
-				<Agreement
-					id="policy"
-					label="I have read and agree to the Terms & Coditions"
-				/>
-				<SignUpButton>Sign Up</SignUpButton>
-			</StyledConfirm>
+			{submitted ? (
+				<SuccessfulMessage />
+			) : (
+				<>
+					<StyledInputContainer>
+						<PartnershipInput
+							label="Email"
+							placeholder="Enter your Email"
+							type="email"
+							id="email"
+							register={{ ...register('email') }}
+							error={errors.email?.message}
+						/>
+						<CustomPasswordInput
+							label="Password"
+							placeholder="Enter your Password"
+							id="password"
+							register={{ ...register('password') }}
+							error={errors.password?.message}
+						/>
+					</StyledInputContainer>
+					<StyledInputContainer>
+						<BusinessDropdown
+							label="Your Business"
+							placeholder="Select one or more"
+						/>
+						<PartnershipInput
+							label="Your Telegram Account"
+							placeholder="Enter your Telegram"
+							type="text"
+							id="telegram"
+							register={{ ...register('telegram') }}
+							error={errors.telegram?.message}
+						/>
+					</StyledInputContainer>
+					<PartnershipTextarea
+						placeholder=". . ."
+						label="Tell about Your results"
+						id="results"
+					/>
+					<StyledConfirm>
+						<Agreement
+							id="policy"
+							label="I have read and agree to the Terms & Coditions"
+						/>
+						<SignUpButton>Sign Up</SignUpButton>
+					</StyledConfirm>
+				</>
+			)}
 		</StyledSignUpForPartnership>
 	);
 };
 
 const StyledSignUpForPartnership = styled.form`
 	width: 100%;
-	height: fit-content;
+	height: 380px;
 	background-image: url('./images/PartnershipFormBg.png');
 	background-repeat: no-repeat;
 	background-position: left;

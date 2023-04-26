@@ -1,12 +1,11 @@
 import GroundBottom from './images/GroundBottom.png';
 import GroundTop from './images/GroundTop.png';
 import Logo from './images/Logo.png';
+import ThumbsUp from './images/ThumbsUp.png';
 
 import SignUp from './icons/signUp.svg';
 import SignIn from './icons/signIn.svg';
 import Plus from './icons/plus.svg';
-import Telegram from './icons/telegram.svg';
-import Email from './icons/email.svg';
 import Close from './icons/close.svg';
 import ListStyle from './icons/listStyle.svg';
 
@@ -14,14 +13,13 @@ export const images = {
 	GroundBottom,
 	GroundTop,
 	Logo,
+	ThumbsUp,
 };
 
 export const icons = {
 	SignIn,
 	SignUp,
 	Plus,
-	Email,
-	Telegram,
 	Close,
 	ListStyle,
 };
