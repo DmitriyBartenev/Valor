@@ -10,7 +10,7 @@ const Meeting = () => {
 	return (
 		<StyledMeeting>
 			<h3>We've been sleeping for the last 10 years and now we're awake!</h3>
-			<p>Shall we meet?</p>
+			<h4>Shall we meet?</h4>
 			<StyledMeetingList>
 				{meetingItems.map((meeting) => (
 					<MeetingItem key={meeting.id} {...meeting} />
@@ -25,7 +25,7 @@ const StyledMeeting = styled.section`
 	h3 {
 		max-width: 479px;
 	}
-	p {
+	h4 {
 		margin: 48px 0 24px;
 		color: ${colors.yellow};
 		font-weight: 800;

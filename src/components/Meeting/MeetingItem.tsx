@@ -64,8 +64,13 @@ const StyledDate = styled.div`
 	align-items: flex-start;
 	gap: 2px;
 	p {
+		font-size: 26px;
+		font-weight: 800;
+		line-height: 32px;
 		color: ${colors.white};
-		margin: 0;
+	}
+	span {
+		line-height: 22px;
 	}
 `;
 

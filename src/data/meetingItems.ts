@@ -11,7 +11,7 @@ export const meetingItems = [
 		height: 80,
 	},
 	{
-		id: 1,
+		id: 2,
 		date: 'Feb., 27. 2023',
 		location: 'Dubai, UAE',
 		logo: BlockchainLifeLogo,

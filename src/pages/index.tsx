@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import styled from 'styled-components';
 
 import Header from '@/components/Header';
 import Main from '@/components/Main';
@@ -15,11 +16,27 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Header />
-			<Main />
-			<Partnership />
-			<Meeting />
-			<Footer />
+			<StyledTopBg>
+				<Header />
+				<Main />
+				<Partnership />
+			</StyledTopBg>
+			<StyledBottomBg>
+				<Meeting />
+				<Footer />
+			</StyledBottomBg>
 		</>
 	);
 }
+
+const StyledTopBg = styled.div`
+	background-image: url('./images/TopBg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+`;
+
+const StyledBottomBg = styled.div`
+	background-image: url('./images/BottomBg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+`;
