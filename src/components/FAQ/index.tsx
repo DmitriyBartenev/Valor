@@ -9,14 +9,14 @@ import { icons } from 'public/index';
 import { colors } from '@/styles';
 
 interface FAQProps {
-	setVisible: React.Dispatch<React.SetStateAction<boolean>>;
+	toggleFAQModal: () => void;
 }
 
-const FAQ: React.FC<FAQProps> = ({ setVisible }) => {
+const FAQ: React.FC<FAQProps> = ({ toggleFAQModal }) => {
 	const { Close } = icons;
 
 	return (
-		<StyledFAQBox onClick={() => setVisible(false)}>
+		<StyledFAQBox>
 			<StyledFAQ>
 				<h3>F.A.Q.</h3>
 				<StyledFAQList>
@@ -25,7 +25,13 @@ const FAQ: React.FC<FAQProps> = ({ setVisible }) => {
 					))}
 				</StyledFAQList>
 				<StyledCloseFAQ>
-					<Image src={Close} alt="CloseFAQ" width={16} height={16} />
+					<Image
+						src={Close}
+						alt="CloseFAQ"
+						width={16}
+						height={16}
+						onClick={toggleFAQModal}
+					/>
 				</StyledCloseFAQ>
 			</StyledFAQ>
 		</StyledFAQBox>
@@ -34,7 +40,7 @@ const FAQ: React.FC<FAQProps> = ({ setVisible }) => {
 
 const StyledFAQBox = styled.div`
 	position: fixed;
-	z-index: 3;
+	z-index: 2;
 	background-color: #00000050;
 	width: 100%;
 	height: 100vh;
@@ -42,7 +48,7 @@ const StyledFAQBox = styled.div`
 	left: 0;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	overflow: auto;
 `;
 

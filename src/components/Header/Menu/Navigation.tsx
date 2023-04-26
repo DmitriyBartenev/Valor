@@ -8,16 +8,16 @@ import { navigationItems } from '@/data/navigationItems';
 import { colors } from '@/styles';
 
 interface NavigationProps {
-	setVisible: React.Dispatch<React.SetStateAction<boolean>>;
+	toggleFAQModal: () => void;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ setVisible }) => {
+const Navigation: React.FC<NavigationProps> = ({ toggleFAQModal }) => {
 	return (
 		<StyledNavigation>
 			{navigationItems.map((navItem) => (
 				<NavigationItem key={navItem.id} {...navItem} />
 			))}
-			<StyledShowFAQ onClick={() => setVisible(true)}>F.A.Q.</StyledShowFAQ>
+			<StyledShowFAQ onClick={toggleFAQModal}>F.A.Q.</StyledShowFAQ>
 		</StyledNavigation>
 	);
 };

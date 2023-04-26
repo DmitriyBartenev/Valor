@@ -13,14 +13,24 @@ const Menu: React.FC = () => {
 
 	const [visible, setVisible] = useState<boolean>(false);
 
+	const toggleFAQModal = () => {
+		if (visible) {
+			setVisible(false);
+			document.body.style.overflow = 'visible';
+		} else {
+			setVisible(true);
+			document.body.style.overflow = 'hidden';
+		}
+	};
+
 	return (
 		<StyledMenu>
 			<StyledNavMenu>
 				<Image src={Logo} width={172} height={40} alt="ValorLogo" />
-				<Navigation setVisible={setVisible} />
+				<Navigation toggleFAQModal={toggleFAQModal} />
 			</StyledNavMenu>
 			<Authentication />
-			{visible && <FAQ setVisible={setVisible} />}
+			{visible && <FAQ toggleFAQModal={toggleFAQModal} />}
 		</StyledMenu>
 	);
 };
