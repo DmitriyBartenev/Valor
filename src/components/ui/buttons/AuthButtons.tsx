@@ -1,18 +1,32 @@
 import React, { ReactNode } from 'react';
+import Image from 'next/image';
 import styled from 'styled-components';
 
 import { colors } from '@/styles';
+import { icons } from 'public/index';
 
 interface AuthButtonsProps {
 	children: ReactNode;
 }
 
+const { SignIn, SignUp } = icons;
+
 export const SignInButton: React.FC<AuthButtonsProps> = ({ children }) => {
-	return <StyledSignInButton>{children}</StyledSignInButton>;
+	return (
+		<StyledSignInButton>
+			<Image src={SignIn} alt="AuthIcon" width={16} height={16} />
+			{children}
+		</StyledSignInButton>
+	);
 };
 
 export const SignUpButton: React.FC<AuthButtonsProps> = ({ children }) => {
-	return <StyledSignUpButton>{children}</StyledSignUpButton>;
+	return (
+		<StyledSignUpButton>
+			<Image src={SignUp} alt="AuthIcon" width={18} height={18} />
+			{children}
+		</StyledSignUpButton>
+	);
 };
 
 const StyledAuthButton = styled.button`

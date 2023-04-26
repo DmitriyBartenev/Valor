@@ -7,11 +7,13 @@ export const colors = {
 	black: '#000000',
 	white: '#FFFFFF',
 	back: '#10102F',
-	light: '#8888A6',
+	light: '#8989AA',
 	yellow: '#FCB223',
 	plateDark: 'rgba(3, 3, 31, 0.6)',
 	plateLight: 'rgba(33, 33, 66, 0.6)',
 	strokeObject: 'rgba(184, 184, 227, 0.08)',
+	strokeInput: 'rgba(184, 184, 227, 0.25)',
+	superDark: '#06061F',
 };
 
 const GlobalStyle = createGlobalStyle`

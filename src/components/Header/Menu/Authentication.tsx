@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import styled from 'styled-components';
 
 import {
@@ -7,21 +6,11 @@ import {
 	SignInButton,
 } from '@/components/ui/buttons/AuthButtons';
 
-import { icons } from 'public/index';
-
 const Authentication: React.FC = () => {
-	const { SignIn, SignUp } = icons;
-
 	return (
 		<StyledAuthentication>
-			<SignInButton>
-				<Image src={SignIn} alt="AuthIcon" width={16} height={16} />
-				Sign In
-			</SignInButton>
-			<SignUpButton>
-				<Image src={SignUp} alt="AuthIcon" width={18} height={18} />
-				Sign Up
-			</SignUpButton>
+			<SignInButton>Sign In</SignInButton>
+			<SignUpButton>Sign Up</SignUpButton>
 		</StyledAuthentication>
 	);
 };
