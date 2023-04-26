@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import SocialItem from './SocialItem';
 
-import { socialsItems } from '@/data/socialsItems';
+import { socialsItems } from '@/data/socialItems';
 
 const Socials: React.FC = () => {
 	return (

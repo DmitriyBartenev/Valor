@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import LanguageItem from './LanguageItem';
 
-import { langs } from '@/data/langs';
+import { langs } from '@/data/langItems';
 
 const Languages: React.FC = () => {
 	return (

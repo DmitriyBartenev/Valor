@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { paymentList } from '@/data/paymentList';
+import { paymentList } from '@/data/paymentItems';
 import PaymentItem from './PaymentItem';
 
 const Payments: React.FC = () => {

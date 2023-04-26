@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 import { colors } from '@/styles';
 
+import Agreement from './Agreement';
 import BusinessDropdown from '../ui/dropdowns/BusinessDropdown';
 import { SignUpButton } from '../ui/buttons/AuthButtons';
 import { PartnershipInput } from '../ui/inputs/PartnershipInput';
 import { PartnershipTextarea } from '../ui/textareas/PartnershipTextarea';
 import { CustomPasswordInput } from '../ui/inputs/CustomPasswordInput';
-import Agreement from './Agreement';
 
 const SignUpForPartnership: React.FC = () => {
 	return (
