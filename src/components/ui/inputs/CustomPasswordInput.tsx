@@ -1,29 +1,34 @@
 import React, { useState } from 'react';
+import { FieldValues } from 'react-hook-form';
 import styled from 'styled-components';
 
 import { colors } from '@/styles';
 
-import { StyledCustomInput } from './styles';
+import { StyledCustomInput, StyledErrorMessage } from './styles';
 import { ShowPasswordIcon } from '../icons/ShowPasswordIcon';
 
 interface CustomPasswordInputProps {
 	label: string;
 	id: string;
 	placeholder: string;
+	register: FieldValues;
+	error: string | undefined;
 }
 
 export const CustomPasswordInput: React.FC<CustomPasswordInputProps> = ({
 	id,
 	label,
 	placeholder,
+	register,
+	error,
 }) => {
 	const [type, setType] = useState<'password' | 'text'>('password');
 
 	return (
-		<StyledCustomInput>
+		<StyledCustomInput error={error}>
 			<label htmlFor={id}>{label}</label>
 			<StyledCustomPasswordInputBox>
-				<input type={type} placeholder={placeholder} id={id} />
+				<input type={type} placeholder={placeholder} id={id} {...register} />
 				<StyledShowPasswordBox type={type}>
 					<button
 						type="button"
@@ -37,6 +42,7 @@ export const CustomPasswordInput: React.FC<CustomPasswordInputProps> = ({
 					</button>
 				</StyledShowPasswordBox>
 			</StyledCustomPasswordInputBox>
+			{error && <StyledErrorMessage>{error}</StyledErrorMessage>}
 		</StyledCustomInput>
 	);
 };

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 
-import { colors } from '@/styles';
+import { IPartnershipForm } from '@/models/IPartnershipForm';
+import { partnershipValidationSchema } from '@/validators/partnershipValidationSchema';
 
 import Agreement from './Agreement';
 import BusinessDropdown from '../ui/dropdowns/BusinessDropdown';
@@ -10,20 +13,43 @@ import { PartnershipInput } from '../ui/inputs/PartnershipInput';
 import { PartnershipTextarea } from '../ui/textareas/PartnershipTextarea';
 import { CustomPasswordInput } from '../ui/inputs/CustomPasswordInput';
 
+import { colors } from '@/styles';
+
 const SignUpForPartnership: React.FC = () => {
+	const [submitted, setSubmitted] = useState<boolean>(false);
+	const {
+		register,
+		handleSubmit,
+		reset,
+		formState: { errors },
+	} = useForm<IPartnershipForm>({
+		resolver: yupResolver(partnershipValidationSchema),
+	});
+
+	const onSubmit: SubmitHandler<IPartnershipForm> = (
+		data: IPartnershipForm
+	) => {
+		setSubmitted(true);
+		reset();
+	};
+
 	return (
-		<StyledSignUpForPartnership>
+		<StyledSignUpForPartnership onSubmit={handleSubmit(onSubmit)}>
 			<StyledInputContainer>
 				<PartnershipInput
 					label="Email"
 					placeholder="Enter your Email"
 					type="email"
 					id="email"
+					register={{ ...register('email') }}
+					error={errors.email?.message}
 				/>
 				<CustomPasswordInput
 					label="Password"
 					placeholder="Enter your Password"
 					id="password"
+					register={{ ...register('password') }}
+					error={errors.password?.message}
 				/>
 			</StyledInputContainer>
 			<StyledInputContainer>
@@ -36,6 +62,8 @@ const SignUpForPartnership: React.FC = () => {
 					placeholder="Enter your Telegram"
 					type="text"
 					id="telegram"
+					register={{ ...register('telegram') }}
+					error={errors.telegram?.message}
 				/>
 			</StyledInputContainer>
 			<PartnershipTextarea

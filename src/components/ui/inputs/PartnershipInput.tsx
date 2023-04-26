@@ -1,11 +1,14 @@
 import React from 'react';
-import { StyledCustomInput } from './styles';
+import { FieldValues } from 'react-hook-form';
+import { StyledCustomInput, StyledErrorMessage } from './styles';
 
 interface PartnershipInputProps {
 	placeholder: string;
 	label: string;
 	type: string;
 	id: string;
+	register: FieldValues;
+	error: string | undefined;
 }
 
 export const PartnershipInput: React.FC<PartnershipInputProps> = ({
@@ -13,11 +16,14 @@ export const PartnershipInput: React.FC<PartnershipInputProps> = ({
 	placeholder,
 	type,
 	id,
+	register,
+	error,
 }) => {
 	return (
-		<StyledCustomInput>
+		<StyledCustomInput error={error}>
 			<label htmlFor={id}>{label}</label>
-			<input type={type} placeholder={placeholder} id={id} />
+			<input type={type} placeholder={placeholder} id={id} {...register} />
+			{error && <StyledErrorMessage>{error}</StyledErrorMessage>}
 		</StyledCustomInput>
 	);
 };
