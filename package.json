@@ -1,11 +1,8 @@
 {
   "name": "valor",
   "version": "0.1.0",
-  "homepage": "https://dmitriybartenev.github.io/Valor",
   "private": true,
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -27,7 +24,6 @@
     "yup": "^1.1.1"
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.26",
-    "gh-pages": "^5.0.0"
+    "@types/styled-components": "^5.1.26"
   }
 }
