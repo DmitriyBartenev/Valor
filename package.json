@@ -1,12 +1,12 @@
 {
   "name": "valor",
-  "homepage": "https://dmitriybartenev.github.io/Valor/",
   "version": "0.1.0",
+  "homepage": "https://dmitriybartenev.github.io/Valor",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
